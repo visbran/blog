@@ -1,0 +1,24 @@
+name: Lighthouse
+
+on:
+  schedule:
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+
+jobs:
+  audit:
+    name: Lighthouse Audit
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Audit Lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            https://visbran.fr
+            https://visbran.fr/blog
+            https://visbran.fr/about
+          uploadArtifacts: true
+          temporaryPublicStorage: true

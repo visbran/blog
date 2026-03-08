@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Type check & Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Installer les dépendances
+        run: bun install --frozen-lockfile
+
+      - name: Vérification TypeScript
+        run: bun run check
+
+      - name: Build
+        run: bunx astro build
+        env:
+          PUBLIC_WALINE_URL: ${{ secrets.PUBLIC_WALINE_URL }}
+          PUBLIC_TURNSTILE_KEY: ${{ secrets.PUBLIC_TURNSTILE_KEY }}
