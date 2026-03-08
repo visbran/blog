@@ -9,11 +9,7 @@ dist/
 [._]*.un~
 
 ### VisualStudioCode ###
-.vscode/*
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
+.vscode/
 
 # Code workspace files
 *.code-workspace
