@@ -1,0 +1,34 @@
+---
+import { PFSearch } from 'astro-pure/components/pages'
+import { Button } from 'astro-pure/user'
+import PageLayout from '@/layouts/BaseLayout.astro'
+import { integ } from '@/site-config'
+import { t } from '@/i18n'
+
+const meta = {
+  description: t('search.description') || 'Rechercher des articles sur l\'ensemble du blog',
+  title: t('search.title')
+}
+---
+
+<PageLayout {meta}>
+  <Button title={t('nav.back')} href='/blog' variant='back' />
+  <main class='mt-6 lg:mt-10'>
+    <div id='content-header' class='animate'>
+      <h1 class='mb-6 text-3xl font-medium'>{t('search.title')}</h1>
+    </div>
+
+    <div id='content' class='animate'>
+      {
+        integ.pagefind ? (
+          <>
+            <p>{t('search.placeholder')}</p>
+            <PFSearch />
+          </>
+        ) : (
+          <p>Pagefind est désactivé.</p>
+        )
+      }
+    </div>
+  </main>
+</PageLayout>

@@ -1,0 +1,205 @@
+---
+import { Spoiler, Timeline } from 'astro-pure/user'
+import PageLayout from '@/layouts/CommonPage.astro'
+import ToolSection from '@/components/about/ToolSection.astro'
+import { t } from '@/i18n'
+
+const headings = [
+  { depth: 2, slug: 'hobbies', text: 'Loisirs' },
+  { depth: 2, slug: 'tools', text: 'Outils' },
+  { depth: 2, slug: 'about-blog', text: 'À propos du blog' }
+]
+---
+
+<PageLayout title={t('about.title')} {headings} comment>
+  <p>Administrateur Système & Réseau</p>
+  <p>
+    Passionné d'infrastructure et de self-hosting depuis plusieurs années, je travaille 
+    actuellement en tant qu'Administrateur Système (~80 utilisateurs). 
+  </p>
+  <p>
+    J'anime ce blog technique pour partager mes expériences en administration système, 
+    mes projets homelab et mes découvertes dans l'écosystème DevOps.
+  </p>
+  <p>
+    Motto: <Spoiler>Keep It Simple, Stupid (KISS)</Spoiler>
+  </p>
+
+  {/* general-talk */}
+  <h2 id='hobbies'>Loisirs</h2>
+  <ul>
+    <li>Self-hosting et gestion d'infrastructure homelab</li>
+    <li>Tests et découverte de nouvelles technologies</li>
+    <li>Veille technologique (Docker, Linux, DevOps, sécurité)</li>
+    <li>Rédaction d'articles techniques et documentation</li>
+  </ul>
+
+  {/* tools */}
+  <h2 id='tools'>Outils</h2>
+  <p>Outils actuellement utilisés :</p>
+  <ToolSection
+    class='mb-5'
+    title='Productivity'
+    tools={[
+      {
+        name: 'Obsidian',
+        description: 'Note taking & Knowledge management',
+        href: 'https://obsidian.md/',
+        icon: import('@/assets/tools/obsidian.svg?raw')
+      },
+      {
+        name: 'BookStack',
+        description: 'Documentation technique',
+        href: 'https://www.bookstackapp.com/',
+        icon: import('@/assets/tools/bookstack.svg?raw')
+      },
+      {
+        name: 'VSCode',
+        description: 'Code Editor',
+        href: 'https://code.visualstudio.com/',
+        icon: import('@/assets/tools/vscode.svg?raw')
+      },
+      {
+        name: 'Cursor',
+        description: 'AI-powered Code Editor',
+        href: 'https://cursor.sh/',
+        icon: import('@/assets/tools/cursor.svg?raw')
+      },
+      {
+        name: 'Firefox',
+        description: 'Browser',
+        href: 'https://www.mozilla.org/firefox',
+        icon: import('@/assets/tools/firefox.svg?raw')
+      }
+    ]}
+  />
+  <ToolSection
+    class='mb-5'
+    title='Infrastructure'
+    tools={[
+      {
+        name: 'Docker',
+        description: 'Containerisation',
+        href: 'https://www.docker.com/',
+        icon: import('@/assets/tools/docker.svg?raw')
+      },
+      {
+        name: 'Proxmox',
+        description: 'Virtualisation',
+        href: 'https://www.proxmox.com/',
+        icon: import('@/assets/tools/proxmox.svg?raw')
+      },
+      {
+        name: 'Nginx Proxy Manager',
+        description: 'Reverse proxy',
+        href: 'https://nginxproxymanager.com/',
+        icon: import('@/assets/tools/nginx.svg?raw')
+      },
+      {
+        name: 'Portainer',
+        description: 'Container management',
+        href: 'https://www.portainer.io/',
+        icon: import('@/assets/tools/portainer.svg?raw')
+      }
+    ]}
+  />
+  <ToolSection
+    class='mb-5'
+    title='Development'
+    tools={[
+      {
+        name: 'Git',
+        description: 'Version control',
+        href: 'https://git-scm.com/',
+        icon: import('@/assets/tools/git.svg?raw')
+      },
+      {
+        name: 'GitHub',
+        description: 'Code hosting',
+        href: 'https://github.com/',
+        icon: import('@/assets/tools/github.svg?raw')
+      },
+      {
+        name: 'Python',
+        description: 'Scripting & automation',
+        href: 'https://www.python.org/',
+        icon: import('@/assets/tools/python.svg?raw')
+      },
+      {
+        name: 'Bash/Shell',
+        description: 'System administration',
+        href: 'https://www.gnu.org/software/bash/',
+        icon: import('@/assets/tools/bash.svg?raw')
+      }
+    ]}
+  />
+  <ToolSection
+    class='mb-5'
+    title='Environment'
+    tools={[
+      {
+        name: 'Debian',
+        description: 'Serveurs de production',
+        href: 'https://www.debian.org/',
+        icon: import('@/assets/tools/debian.svg?raw')
+      },
+      {
+        name: 'Ubuntu Server',
+        description: 'Infrastructure principale',
+        href: 'https://ubuntu.com/server',
+        icon: import('@/assets/tools/ubuntu.svg?raw')
+      },
+      {
+        name: 'Arch Linux',
+        description: 'Exploration et tests',
+        href: 'https://archlinux.org/',
+        icon: import('@/assets/tools/archlinux.svg?raw')
+      },
+      {
+        name: 'Docker',
+        description: 'Environnements isolés',
+        href: 'https://www.docker.com/',
+        icon: import('@/assets/tools/docker.svg?raw')
+      }
+    ]}
+  />
+
+  {/* about-blog */}
+  <h2 id='about-blog'>À propos du blog</h2>
+  <p>Historique du site :</p>
+  <Timeline
+    events={[
+      {
+        date: '2024-12-26',
+        content: 'Migration vers Astro avec le thème <a href="https://github.com/cworld1/astro-theme-pure" target="_blank" rel="noopener noreferrer">Astro Theme Pure</a>'
+      },
+      {
+        date: '2024-12-26',
+        content: 'Traduction française complète du thème'
+      },
+      {
+        date: '2024-12-26',
+        content: 'Personnalisation et adaptation du contenu'
+      }
+    ]}
+  />
+  <p>
+    Le bon fonctionnement et la personnalisation du site s'appuient également sur les ressources et
+    le support technique fournis par les excellents projets/fournisseurs de services suivants :
+  </p>
+  <ul>
+    <li>
+      Framework & Thème : <a href='https://astro.build/' target='_blank' rel='noopener noreferrer'>Astro</a> + <a
+        href='https://github.com/cworld1/astro-theme-pure'
+        target='_blank' rel='noopener noreferrer'>Astro Theme Pure</a
+      >
+    </li>
+    <li>
+      Hébergement : <a href='https://vercel.com/' target='_blank' rel='noopener noreferrer'>Vercel</a>
+    </li>
+    <li>
+      CI/CD : <a href='https://vercel.com/workflow' target='_blank' rel='noopener noreferrer'>Vercel Workflow</a>
+    </li>
+    <li>Recherche : <a href='https://pagefind.app/' target='_blank' rel='noopener noreferrer'>Pagefind</a></li>
+  </ul>
+</PageLayout>

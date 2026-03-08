@@ -1,0 +1,127 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=()" },
+        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://api.fontshare.com; font-src 'self' https://api.fontshare.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://waline-comments-eight-wheat.vercel.app https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; worker-src 'none'; object-src 'none'; base-uri 'self';" }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/feed",
+      "destination": "/rss.xml",
+      "permanent": true
+    },
+    {
+      "source": "/a-propos",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/chiffrer-ses-donnees-gpg",
+      "destination": "/blog/chiffrer-ses-donnees-gpg",
+      "permanent": true
+    },
+    {
+      "source": "/commande-find-linux",
+      "destination": "/blog/commande-find-linux",
+      "permanent": true
+    },
+    {
+      "source": "/comment-changer-lediteur-de-texte-par-defaut-sous-debian",
+      "destination": "/blog/comment-changer-lediteur-de-texte-par-defaut-sous-debian",
+      "permanent": true
+    },
+    {
+      "source": "/comment-supprimer-un-dossier-ou-un-fichier-avec-un-nom-trop-long-sous-windows",
+      "destination": "/blog/comment-supprimer-un-dossier-ou-un-fichier-avec-un-nom-trop-long-sous-windows",
+      "permanent": true
+    },
+    {
+      "source": "/configuration-ssh",
+      "destination": "/blog/configuration-ssh",
+      "permanent": true
+    },
+    {
+      "source": "/configurer-ubuntu-netplan",
+      "destination": "/blog/configurer-ubuntu-netplan",
+      "permanent": true
+    },
+    {
+      "source": "/could-not-open-a-connection-to-your-authentication-agent",
+      "destination": "/blog/could-not-open-a-connection-to-your-authentication-agent",
+      "permanent": true
+    },
+    {
+      "source": "/creation-cle-bootable-ventoy",
+      "destination": "/blog/creation-cle-bootable-ventoy",
+      "permanent": true
+    },
+    {
+      "source": "/creation-utilisateur-dedie-sauvegarde-mysql",
+      "destination": "/blog/creation-utilisateur-dedie-sauvegarde-mysql",
+      "permanent": true
+    },
+    {
+      "source": "/desactivation-ipv6-linux",
+      "destination": "/blog/desactivation-ipv6-linux",
+      "permanent": true
+    },
+    {
+      "source": "/erreur-connexion-base-de-donnees-wordpress",
+      "destination": "/blog/erreur-connexion-base-de-donnees-wordpress",
+      "permanent": true
+    },
+    {
+      "source": "/installation-archlinux",
+      "destination": "/blog/installation-archlinux",
+      "permanent": true
+    },
+    {
+      "source": "/installer-docker-guide-complet-pour-debutants",
+      "destination": "/blog/installer-docker-guide-complet-pour-debutants",
+      "permanent": true
+    },
+    {
+      "source": "/inxi-afficher-des-infos-systemes",
+      "destination": "/blog/inxi-afficher-des-infos-systemes",
+      "permanent": true
+    },
+    {
+      "source": "/modification-swap-linux-conseils-administrateurs-systeme",
+      "destination": "/blog/modification-swap-linux-conseils-administrateurs-systeme",
+      "permanent": true
+    },
+    {
+      "source": "/mremoteng-loutil-ideal-pour-un-sysadmin",
+      "destination": "/blog/mremoteng-loutil-ideal-pour-un-sysadmin",
+      "permanent": true
+    },
+    {
+      "source": "/nginx-mise-a-jour-directive-http2",
+      "destination": "/blog/nginx-mise-a-jour-directive-http2",
+      "permanent": true
+    },
+    {
+      "source": "/planification-de-taches-avec-crontab",
+      "destination": "/blog/planification-de-taches-avec-crontab",
+      "permanent": true
+    },
+    {
+      "source": "/regler-le-probleme-update-initramfs",
+      "destination": "/blog/regler-le-probleme-update-initramfs",
+      "permanent": true
+    },
+    {
+      "source": "/supprimer-fichiers-commande-find",
+      "destination": "/blog/commande-find-linux",
+      "permanent": true
+    }
+  ]
+}
