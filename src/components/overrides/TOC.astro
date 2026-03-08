@@ -8,9 +8,24 @@
 
 import type { MarkdownHeading } from 'astro'
 
-import { generateToc } from '../../../packages/pure/plugins/toc'
-import TOCHeading from '../../../packages/pure/components/pages/TOCHeading.astro'
+import { TOCHeading } from 'astro-pure/components/pages'
 import { t } from '@/i18n'
+
+interface TocItem extends MarkdownHeading {
+  subheadings: TocItem[]
+}
+
+function generateToc(headings: readonly MarkdownHeading[]): TocItem[] {
+  const root: TocItem = { depth: 0, slug: 'root', text: 'Root', subheadings: [] }
+  const stack: TocItem[] = [root]
+  headings.forEach((h) => {
+    const heading: TocItem = { ...h, subheadings: [] }
+    while (stack[stack.length - 1].depth >= heading.depth) stack.pop()
+    stack[stack.length - 1].subheadings.push(heading)
+    stack.push(heading)
+  })
+  return root.subheadings
+}
 
 interface Props {
   headings: MarkdownHeading[]

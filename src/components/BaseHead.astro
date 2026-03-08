@@ -95,6 +95,7 @@ const socialImageURL = new URL(ogImage ? ogImage : config.socialCard, Astro.url)
 {
   articleDate && (
     <script
+      is:inline
       type='application/ld+json'
       set:html={JSON.stringify({
         '@context': 'https://schema.org',
