@@ -170,7 +170,7 @@ export const integ: IntegrationUserConfig = {
   waline: {
     enable: true,
     /** URL de votre serveur Waline (à configurer) */
-    server: process.env.PUBLIC_WALINE_URL?.replace(/\/$/, ''),
+    server: 'https://waline-comments-eight-wheat.vercel.app',
     /** Émojis disponibles (noms courts, le CDN est ajouté par Comment.astro) */
     emoji: ['bmoji', 'weibo'],
     /** Configuration supplémentaire */
