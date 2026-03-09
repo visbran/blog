@@ -170,7 +170,7 @@ export const integ: IntegrationUserConfig = {
   waline: {
     enable: true,
     /** URL de votre serveur Waline (à configurer) */
-    server: process.env.PUBLIC_WALINE_URL,
+    server: process.env.PUBLIC_WALINE_URL?.replace(/\/$/, ''),
     /** Émojis disponibles */
       emoji: [
     'https://cdn.jsdelivr.net/npm/@waline/emojis@1.2.0/bmoji',
