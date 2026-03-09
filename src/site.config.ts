@@ -129,8 +129,8 @@ export const integ: IntegrationUserConfig = {
     applyTip: [
       { name: 'Nom', val: 'Blog Tech de visbran' },
       { name: 'Description', val: 'Administration Système • Infrastructure • Homelab • DevOps' },
-      { name: 'Lien', val: 'https://visbran.fr/' },
-      { name: 'Avatar', val: 'https://visbran.fr/favicon/favicon.ico' }
+      { name: 'Lien', val: 'https://www.visbran.fr/' },
+      { name: 'Avatar', val: 'https://www.visbran.fr/favicon/favicon.ico' }
     ],
 
     /** Cache les avatars dans public/avatars/ pour de meilleures performances */
@@ -170,7 +170,7 @@ export const integ: IntegrationUserConfig = {
   waline: {
     enable: true,
     /** URL de votre serveur Waline (à configurer) */
-    server: import.meta.env.PUBLIC_WALINE_URL,
+    server: process.env.PUBLIC_WALINE_URL,
     /** Émojis disponibles */
       emoji: [
     'https://cdn.jsdelivr.net/npm/@waline/emojis@1.2.0/bmoji',
