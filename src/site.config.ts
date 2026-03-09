@@ -171,11 +171,8 @@ export const integ: IntegrationUserConfig = {
     enable: true,
     /** URL de votre serveur Waline (à configurer) */
     server: process.env.PUBLIC_WALINE_URL?.replace(/\/$/, ''),
-    /** Émojis disponibles */
-      emoji: [
-    'https://cdn.jsdelivr.net/npm/@waline/emojis@1.2.0/bmoji',
-    'https://cdn.jsdelivr.net/npm/@waline/emojis@1.2.0/weibo',
-  ],
+    /** Émojis disponibles (noms courts, le CDN est ajouté par Comment.astro) */
+    emoji: ['bmoji', 'weibo'],
     /** Configuration supplémentaire */
     additionalConfigs: {
       pageview: true,    // Compteur de vues
