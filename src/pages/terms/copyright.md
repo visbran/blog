@@ -1,7 +1,7 @@
 ---
 layout: '@/layouts/IndividualPage.astro'
-title: 'Droits d'auteur'
-description: 'Licence et conditions d'utilisation du contenu de visbran.fr'
+title: "Droits d'auteur"
+description: "Licence et conditions d'utilisation du contenu de visbran.fr"
 back: '/terms/list'
 ---
 

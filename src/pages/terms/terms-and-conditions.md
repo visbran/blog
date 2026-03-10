@@ -1,7 +1,7 @@
 ---
 layout: '@/layouts/IndividualPage.astro'
-title: 'Conditions d'utilisation'
-description: 'Conditions générales d'utilisation de visbran.fr'
+title: "Conditions d'utilisation"
+description: "Conditions générales d'utilisation de visbran.fr"
 back: '/terms/list'
 ---
 
