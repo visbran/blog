@@ -30,6 +30,8 @@ node_modules/
 .env.production
 
 ### Custom ###
+CLAUDE.md
+CLAUDE.MD
 .DS_Store
 old_blog
 ignore.*
