@@ -79,10 +79,7 @@ export const theme: ThemeUserConfig = {
 
     /** Liens dans le footer */
     links: [
-      { title: 'Politique de confidentialité', link: '/terms/privacy-policy', pos: 1 },
-      { title: 'CGU', link: '/terms/terms-and-conditions', pos: 1 },
-      { title: 'Droits d\'auteur', link: '/terms/copyright', pos: 1 },
-      { title: 'Avertissement', link: '/terms/disclaimer', pos: 1 }
+      { title: 'Mentions légales', link: '/terms/list', pos: 1 }
     ],
 
     /** Affiche "Propulsé par Astro & Pure theme" */
