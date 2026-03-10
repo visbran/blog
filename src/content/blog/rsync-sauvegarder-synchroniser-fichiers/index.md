@@ -1,6 +1,6 @@
 ---
 title: "rsync : sauvegarder et synchroniser ses fichiers efficacement"
-description: rsync est l'outil de référence pour la synchronisation et la sauvegarde de fichiers sous Linux. Maîtrisez ses options essentielles et automatisez vos sauvegardes.
+description: rsync est l'outil de référence pour la sauvegarde et la synchronisation sous Linux. Maîtrisez ses options essentielles et automatisez vos sauvegardes.
 publishDate: '2026-03-10T10:00:00+01:00'
 tags:
   - administration système
