@@ -1,0 +1,99 @@
+name: Vérification compatibilité astro-pure / Astro 6
+
+on:
+  schedule:
+    # Chaque lundi à 09h00 UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+jobs:
+  check:
+    name: Vérifier si astro-pure supporte Astro 6
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer la dernière version de astro-pure
+        id: check
+        run: |
+          LATEST=$(npm view astro-pure version)
+          echo "version=$LATEST" >> $GITHUB_OUTPUT
+
+          # Récupérer la contrainte astro dans les dépendances
+          ASTRO_DEP=$(npm view "astro-pure@$LATEST" dependencies.astro 2>/dev/null || echo "")
+          echo "astro_dep=$ASTRO_DEP" >> $GITHUB_OUTPUT
+
+          # Vérifier si la contrainte est compatible Astro 6 (^6 ou >=6)
+          if echo "$ASTRO_DEP" | grep -qE '(\^6|>=6)'; then
+            echo "compatible=true" >> $GITHUB_OUTPUT
+          else
+            echo "compatible=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Résumé
+        env:
+          VERSION: ${{ steps.check.outputs.version }}
+          ASTRO_DEP: ${{ steps.check.outputs.astro_dep }}
+          COMPATIBLE: ${{ steps.check.outputs.compatible }}
+        run: |
+          echo "astro-pure version : $VERSION"
+          echo "Contrainte astro   : $ASTRO_DEP"
+          echo "Compatible Astro 6 : $COMPATIBLE"
+
+      - name: Créer une issue si compatible Astro 6
+        if: steps.check.outputs.compatible == 'true'
+        uses: actions/github-script@v7
+        env:
+          ASTRO_PURE_VERSION: ${{ steps.check.outputs.version }}
+          ASTRO_DEP: ${{ steps.check.outputs.astro_dep }}
+        with:
+          script: |
+            const version = process.env.ASTRO_PURE_VERSION;
+            const astroDep = process.env.ASTRO_DEP;
+
+            // Vérifier si une issue similaire est déjà ouverte
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'astro-6-migration',
+            });
+
+            if (issues.data.length > 0) {
+              core.info('Une issue de migration est déjà ouverte, pas de doublon créé.');
+              return;
+            }
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `astro-pure@${version} est compatible Astro 6 — migration possible`,
+              labels: ['astro-6-migration'],
+              body: [
+                '## astro-pure supporte maintenant Astro 6',
+                '',
+                `**Version détectée :** \`astro-pure@${version}\``,
+                `**Contrainte astro :** \`${astroDep}\``,
+                '',
+                '## Actions à effectuer',
+                '',
+                'Voir le plan complet dans `md/dependances-securite.md`.',
+                '',
+                '### Commandes',
+                '```bash',
+                'npx @astrojs/upgrade',
+                'bun update astro-pure',
+                '# Modifier package.json : "@astrojs/vercel": "^10.0.2"',
+                'bun update @astrojs/vercel',
+                'bun run check',
+                'bun run build',
+                '```',
+                '',
+                '## Contexte',
+                '',
+                '- Corrige **CVE-2026-33768** (sévérité modérée) dans `@astrojs/vercel < 10.0.2`',
+                '- `@astrojs/vercel@10` requiert `astro@^6`',
+                '',
+                '---',
+                '_Créée automatiquement par le workflow `check-astro-pure-compat.yml`_',
+              ].join('\n'),
+            });
