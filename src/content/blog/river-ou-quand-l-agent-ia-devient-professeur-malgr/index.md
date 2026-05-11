@@ -2,8 +2,8 @@
 title: "River, ou quand l'agent IA devient professeur malgré lui"
 description: "On nous vend surtout des agents IA comme des remplaçants silencieux. Un truc qui s'installe dans un coin de VS Code, noyé dans les onglets, et qui crache d..."
 heroImage:
-  src: "https://picsum.photos/seed/learning-on-the-shop-floor/1200/630"
-  alt: "River, ou quand l'agent IA devient professeur malgré lui"
+  src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80"
+  alt: "Ingénieurs collaborant en équipe autour d'un problème technique"
   inferSize: true
 publishDate: '2026-05-11T20:47:16.370Z'
 tags:
