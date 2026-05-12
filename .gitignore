@@ -41,3 +41,7 @@ package-lock.json
 /test/
 /md/
 /py/
+
+# MCP credentials (local only)
+.mcp.json
+n8n/

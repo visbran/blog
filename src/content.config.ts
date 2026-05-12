@@ -36,7 +36,11 @@ const blog = defineCollection({
       language: z.string().optional(),
       draft: z.boolean().default(false),
       // Special fields
-      comment: z.boolean().default(true)
+      comment: z.boolean().default(true),
+      // Automation fields
+      automated: z.boolean().optional().default(false),
+      sources: z.array(z.string()).optional(),
+      contentType: z.enum(['digest', 'tool', 'tutorial', 'article']).optional()
     })
 })
 

@@ -17,7 +17,7 @@ export const theme: ThemeUserConfig = {
   author: 'Visbran',
 
   /** Description du site - utilisée dans les métadonnées */
-  description: 'Administration Système • Infrastructure • Homelab • DevOps',
+  description: 'Veille IA quotidienne • Outils • Modèles • Recherche en français',
 
   /** Favicon - chemin vers l'image dans public/ */
   favicon: '/favicon/favicon.ico',
@@ -63,6 +63,8 @@ export const theme: ThemeUserConfig = {
   /** Menu de navigation dans le header */
   header: {
     menu: [
+      { title: 'Digest', link: '/tags/digest' },
+      { title: 'Outils IA', link: '/tags/outils-ia' },
       { title: 'Blog', link: '/blog' },
       { title: 'À Propos', link: '/about' }
     ]
@@ -123,7 +125,7 @@ export const integ: IntegrationUserConfig = {
     /** Info pour les demandes d'échange de liens */
     applyTip: [
       { name: 'Nom', val: 'Blog Tech de visbran' },
-      { name: 'Description', val: 'Administration Système • Infrastructure • Homelab • DevOps' },
+      { name: 'Description', val: 'Veille IA quotidienne • Outils • Modèles • Recherche en français' },
       { name: 'Lien', val: 'https://www.visbran.fr/' },
       { name: 'Avatar', val: 'https://www.visbran.fr/favicon/favicon.ico' }
     ],
