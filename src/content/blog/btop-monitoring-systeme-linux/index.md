@@ -6,7 +6,7 @@ tags:
   - administration système
   - linux
 language: fr
-draft: true
+draft: false
 comment: true
 ---
 

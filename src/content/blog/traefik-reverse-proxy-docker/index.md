@@ -9,7 +9,7 @@ tags:
   - linux
   - réseau
 language: fr
-draft: true
+draft: false
 comment: true
 ---
 

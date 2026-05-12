@@ -9,7 +9,7 @@ tags:
   - auto-hébergement
   - git
 language: fr
-draft: true
+draft: false
 comment: true
 ---
 

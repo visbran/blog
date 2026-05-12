@@ -8,7 +8,7 @@ tags:
   - scripting
   - automatisation
 language: fr
-draft: true
+draft: false
 comment: true
 ---
 

@@ -8,7 +8,7 @@ tags:
   - docker
   - devops
 language: fr
-draft: true
+draft: false
 comment: true
 ---
 

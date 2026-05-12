@@ -8,7 +8,7 @@ tags:
   - sécurité
   - ssh
 language: fr
-draft: true
+draft: false
 comment: true
 ---
 

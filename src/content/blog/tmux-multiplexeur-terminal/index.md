@@ -8,7 +8,7 @@ tags:
   - ssh
   - scripting
 language: fr
-draft: true
+draft: false
 comment: true
 ---
 
