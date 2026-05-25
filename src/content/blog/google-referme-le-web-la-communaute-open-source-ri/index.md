@@ -1,6 +1,6 @@
 ---
 title: "Google referme le web, la communauté open source riposte"
-description: "L'IA redessine les interfaces et les infrastructures. Face à la centralisation de Google, l'open source et les communautés développeurs imposent un contre-modèle résilient."
+description: "Face à la centralisation de Google, l'open source et les communautés développeurs imposent un contre-modèle résilient et distribué."
 heroImage:
   src: "https://images.unsplash.com/photo-1549692520-acc6669e2f0c?w=1200&q=80"
   alt: "Google referme le web, la communauté open source riposte"
