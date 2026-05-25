@@ -41,7 +41,7 @@ jobs:
 
       - name: Créer une issue si compatible Astro 6
         if: steps.check.outputs.compatible == 'true'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           ASTRO_PURE_VERSION: ${{ steps.check.outputs.version }}
           ASTRO_DEP: ${{ steps.check.outputs.astro_dep }}
