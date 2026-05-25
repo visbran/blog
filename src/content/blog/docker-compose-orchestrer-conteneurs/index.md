@@ -1,6 +1,6 @@
 ---
 title: "Docker Compose : orchestrer ses conteneurs avec un fichier YAML"
-description: Docker Compose permet de définir et gérer des applications multi-conteneurs. Découvrez comment structurer vos services, volumes et réseaux en un seul fichier.
+description: Docker Compose définit et gère des applications multi-conteneurs. Découvrez comment structurer vos services, volumes et réseaux simplement.
 publishDate: '2026-03-10T10:00:00+01:00'
 tags:
   - administration système

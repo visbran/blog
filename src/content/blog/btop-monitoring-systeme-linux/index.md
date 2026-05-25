@@ -1,6 +1,6 @@
 ---
 title: "btop : le monitoring système moderne sous Linux"
-description: btop remplace htop avec des graphiques clairs et une navigation à la souris. Surveillez CPU, mémoire, réseau, disques et processus en temps réel sous Linux.
+description: btop remplace htop avec des graphiques clairs et navigation à la souris. Surveillez CPU, mémoire, réseau, disques et processus en temps réel.
 publishDate: '2026-03-10T10:00:00+01:00'
 tags:
   - administration système

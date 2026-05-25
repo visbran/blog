@@ -1,6 +1,6 @@
 ---
 title: "UFW : configurer un pare-feu simple sous Linux"
-description: UFW (Uncomplicated Firewall) est l'outil idéal pour gérer iptables simplement. Apprenez à sécuriser votre serveur Linux avec des règles claires et efficaces.
+description: UFW (Uncomplicated Firewall) est l'outil idéal pour gérer iptables simplement. Sécurisez votre serveur Linux avec des règles claires et efficaces.
 publishDate: '2026-03-10T10:00:00+01:00'
 tags:
   - administration système

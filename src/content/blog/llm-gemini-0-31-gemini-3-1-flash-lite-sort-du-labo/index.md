@@ -1,6 +1,6 @@
 ---
 title: "llm-gemini 0.31 : Gemini 3.1 Flash-Lite sort du labo et arrive dans ton terminal"
-description: "Simon Willison a construit un écosystème incroyablement pratique autour de son outil `llm` : un CLI Python qui sert de hub universel pour discuter avec des..."
+description: "Simon Willison a construit un écosystème pratique autour de son outil `llm` : un CLI Python qui sert de hub universel pour discuter avec des..."
 heroImage:
   src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80"
   alt: "llm-gemini 0.31 : Gemini 3.1 Flash-Lite sort du labo et arrive dans ton terminal"
@@ -25,7 +25,7 @@ sources:
 
 ### Quand Gemini débarque dans ton workflow CLI
 
-Simon Willison a construit un écosystème incroyablement pratique autour de son outil `llm` : un CLI Python qui sert de hub universel pour discuter avec des modèles de langage. L'idée est simple mais brillante : au lieu d'avoir une interface dédiée pour OpenAI, un script maison pour Anthropic et un notebook pour Google, tu passes par un seul outil normalisé. Chaque fournisseur devient un plugin. Le plugin `llm-gemini`, maintenu par Willison et disponible sur son dépôt habituel, fait exactement ce pont entre cette toolchain et l'API Google Gemini. Avec la release 0.31, ce n'est pas juste une mise à jour de numéro : le modèle `gemini-3.1-flash-lite` sort officiellement du statut preview et devient une option de production fiable pour tous tes scripts. Cela signifie que Google garantit désormais la stabilité du modèle et de son prix, ce qui transforme un gadget sympathique en outil d'infrastructure que tu peux lancer en cron sans sueur froide.
+Simon Willison a construit un écosystème pratique autour de son outil `llm` : un CLI Python qui sert de hub universel pour discuter avec des modèles de langage. L'idée est simple mais brillante : au lieu d'avoir une interface dédiée pour OpenAI, un script maison pour Anthropic et un notebook pour Google, tu passes par un seul outil normalisé. Chaque fournisseur devient un plugin. Le plugin `llm-gemini`, maintenu par Willison et disponible sur son dépôt habituel, fait exactement ce pont entre cette toolchain et l'API Google Gemini. Avec la release 0.31, ce n'est pas juste une mise à jour de numéro : le modèle `gemini-3.1-flash-lite` sort officiellement du statut preview et devient une option de production fiable pour tous tes scripts. Cela signifie que Google garantit désormais la stabilité du modèle et de son prix, ce qui transforme un gadget sympathique en outil d'infrastructure que tu peux lancer en cron sans sueur froide.
 
 ### Flash-Lite stable : l'arme secrète du batch processing
 

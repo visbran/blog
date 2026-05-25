@@ -1,6 +1,6 @@
 ---
 title: "River, ou quand l'agent IA devient professeur malgré lui"
-description: "On nous vend surtout des agents IA comme des remplaçants silencieux. Un truc qui s'installe dans un coin de VS Code, noyé dans les onglets, et qui crache d..."
+description: "On nous vend surtout des agents IA comme des remplaçants silencieux. Un outil qui s'installe dans VS Code, noyé dans les onglets, et qui crache des..."
 heroImage:
   src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80"
   alt: "Ingénieurs collaborant en équipe autour d'un problème technique"
@@ -23,7 +23,7 @@ sources:
 
 > **TL;DR** : River, l'agent de codage interne de Shopify, refuse les messages privés et force tout le monde à travailler avec elle dans des canaux Slack publics, transformant chaque session de code en atelier d'apprentissage collectif que tu peux reproduire dès maintenant avec l'agent que tu as déjà sous la main.
 
-On nous vend surtout des agents IA comme des remplaçants silencieux. Un truc qui s'installe dans un coin de VS Code, noyé dans les onglets, et qui crache du code que personne ne verra jamais. Shopify vient de montrer que c'est exactement l'inverse qu'il faut faire. Chez eux, River, leur agent de codage maison, a une règle absolue : elle ne répond pas aux MPs. Si tu veux qu'elle bosse, tu crées un canal Slack public et tu te mets à nu devant toute l'entreprise.
+On nous vend surtout des agents IA comme des remplaçants silencieux. Un outil qui s'installe dans VS Code, noyé dans les onglets, et qui crache desu code que personne ne verra jamais. Shopify vient de montrer que c'est exactement l'inverse qu'il faut faire. Chez eux, River, leur agent de codage maison, a une règle absolue : elle ne répond pas aux MPs. Si tu veux qu'elle bosse, tu crées un canal Slack public et tu te mets à nu devant toute l'entreprise.
 
 ### Ce que River fait vraiment
 
