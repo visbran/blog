@@ -35,7 +35,7 @@
     "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
     "@typescript-eslint/parser": "^8.48.1",
     "eslint": "^10.1.0",
-    "eslint-plugin-astro": "^1.5.0",
+    "eslint-plugin-astro": "^2.0.0",
     "prettier": "^3.7.4",
     "prettier-plugin-astro": "^0.14.1"
   }
